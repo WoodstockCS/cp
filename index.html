@@ -1,826 +1,870 @@
 <html>
-  <head>
-    <title>CP</title>
-    <style>
-      table, th, td {border: 1px solid black;}
-      body {
-          background-color: rgb(200,200,200);
-          color: rgb(0,0,0);
-          font-family: "Open Sans", sans-serif;
-      }
+<head>
+  <title>CP</title>
+  <style>
+  table, th, td {border: 1px solid black;}
+  body {
+    background-color: rgb(200,200,200);
+    color: rgb(0,0,0);
+    font-family: "Open Sans", sans-serif;
+  }
 
-      #content {
-          display: block;
-          margin-left: auto;
-          margin-right: auto
-      }
+  #content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
 
-    </style>
-    <script src="processing.min.js"></script>
-    
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="theme-color" content="#ffffff">
+  </style>
+  <script src="processing.min.js"></script>
 
-  </head>
-  <body>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
 
-      <canvas data-processing-sources="hberHalftimePenguin.pde"></canvas>
-      <canvas data-processing-sources="afEllipseColors.pde"></canvas>
+</head>
+<body>
+  
+  <br>
+
+  <h1>Computer Programming</h1>
+  <p>2nd Semester, H Block, Room 9</p>
+  <p>Instructor: Andrew Smith <a href="mailto:AndrewSmith@wcsu.net">AndrewSmith@wcsu.net</a></p>
+  <br>
+  <h3>Assignments & Quizzes</h3>
+  <p><i>All assignments are due at the start of class on the date indicated.</i></p>
+
+  <table>
+    <tr>
+      <th>
+        Due/Date
+      </th>
+      <th>
+        Instructions
+      </th>
+    </tr>
+    <tr>
+      <td valign="top">
+        Apr 14, end of class
+      </td>
+      <td valign="top">
+        FunctionExercises: six PDE files updated in your fork of the repo on github<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        Apr 14, end of class
+      </td>
+      <td valign="top">
+        Lightning: one PDE file updated in your fork of the repo on github<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        Apr 27
+      </td>
+      <td valign="top">
+        Looping Quiz<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        May 3, end of class
+      </td>
+      <td valign="top">
+        do FirstHtml (includes Khan Academy)
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        May 15, start of class
+      </td>
+      <td valign="top">
+        finish <a href="https://www.khanacademy.org/computing/computer-programming/programming#logic-if-statements">Khan > Intro to JS > Logic & If Statements</a><br>
+        NO GITHUB - JUST MAKE SURE YOU'RE SIGNED IN
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        May 15, start of class
+      </td>
+      <td valign="top">
+        do SnakeGame, fork a repo in Github. make sure it displays on your webpage. (you can skip pull request)
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        May 23, start of class
+      </td>
+      <td valign="top">
+        do ProfileProject: follow the paper packet, and the last part is on github<br>(includes Shiffman video <a href="https://www.youtube.com/watch?v=H7frvcAHXps">6.6 Nested Loops</a>)
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        June 8 (or May 31 for seniors)
+      </td>
+      <td valign="top">
+        These codingbat problems:<br>
+        Warmup-1 > sleepIn<br>
+        Warmup-1 > sumDouble<br>
+        Warmup-1 > makes10<br>
+        Warmup-1 > diff21<br>
+        Logic-1 > sortaSum<br>
+        Logic-1 > in1To10<br>
+        Logic-1 > twoAsOne<br>
+        <br>
+        optional DISTINGUISHED, add these: <br>
+        Logic-1 > dateFashionteaParty<br>
+        Logic-1 > alarmClock<br>
+        Logic-2 > loneSum<br>
+        Logic-2 > luckySum<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        Seniors = June 2, 3pm<br>
+        rest = June 9, 3pm
+      </td>
+      <td valign="top">
+        FinalExamProject<br>
+      </td>
+    </tr>
+    <!-- hide quarter 3
+    <tr>
+    <td valign="top">
+    Jan 19
+  </td>
+  <td valign="top">
+  1. read the syllabus (linked below) with your parent/guardian<br>
+  2. each of you please me separate emails saying you read it
+</td>
+</tr>
+<tr>
+<td valign="top">
+Jan 30
+</td>
+<td valign="top">
+create a pull request on github for your OlympicRings
+</td>
+</tr>
+<tr>
+<td valign="top">
+Jan 30
+</td>
+<td valign="top">
+create a pull request on github for your MyPenguin
+</td>
+</tr>
+<tr>
+<td valign="top">
+Jan 30
+</td>
+<td valign="top">
+Quiz 0, on drawing functions and basic terms
+</td>
+</tr>
+<tr>
+<td valign="top">
+Mar 9
+</td>
+<td valign="top">
+submit a pull request for HalftimePenguin
+</td>
+</tr>
+<tr>
+<td valign="top">
+Mar 9
+</td>
+<td valign="top">
+submit a pull request for WoodstockWave
+</td>
+</tr>
+<tr>
+<td valign="top">
+Mar 21
+</td>
+<td valign="top">
+submit a pull request for MyFavicon (see paper given in class 3/13)
+</td>
+</tr>
+<tr>
+<td valign="top">
+Mar 21
+</td>
+<td valign="top">
+save <a href="https://docs.google.com/document/d/1qhHXFqc88GKsJBMScpO7SaLnnlvTP8nehZNGMwg2iaU/edit?usp=sharing">set of "while loop" reference sketches</a> in your sketchbook
+</td>
+</tr>
+<tr>
+<td valign="top">
+Mar 21
+</td>
+<td valign="top">
+LoopyPenguin saved to your sketchbook (see class notes below)
+</td>
+</tr>
+<tr>
+<td valign="top">
+Mar 23
+</td>
+<td valign="top">
+video notes from March 23 sub class (see class notes below)
+</td>
+</tr>
+<tr>
+<td valign="top">
+Mar 29
+</td>
+<td valign="top">
+Quiz 1: while loops and variables
+</td>
+</tr>
+-->
+
+
+</table>
 <br>
+<h3>Schedule</h3>
+<table>
+  <tr>
+    <th>
+      Date
+    </th>
+    <th>
+      Day
+    </th>
+    <th>
+      Agenda
+    </th>
+  </tr>
+  <!-- hide quarter 3
+  <tr>
+  <td valign="top">
+  Jan 17
+</td>
+<td valign="top">
+0
+</td>
+<td valign="top">
+<ul>
+<li>Lecture: intro to course, intro to processing, how to submit projects</li>
+<li>Project: work on OlympicRings</li>
+<li>Finished? tinker with a new design or browse OpenProcessing.org</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Jan 19
+</td>
+<td valign="top">
+1
+</td>
+<td valign="top">
+<ul>
+<li>Announcements: remember woodstockcs.github.io ... also: syllabus signature (grade)</li>
+<li>Lecture: how to submit projects, more drawing functions</li>
+<li>Project: work on OlympicRings and MyPenguin</li>
+<li>Finished? browse OpenProcessing.org OR use the Processing API to teach yourself a new function</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Jan 23
+</td>
+<td valign="top">
+2
+</td>
+<td valign="top">
+<ul>
+<li>SHORT BLOCK</li>
+<li>Announcements: remember woodstockcs.github.io</li>
+<li>Lecture: Kanizsa Triangle coding challenge</li>
+<li>Project: work on OlympicRings and MyPenguin</li>
+<li>Finished? browse OpenProcessing.org OR make your own Kanizsa Triangle</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Jan 25
+</td>
+<td valign="top">
+3
+</td>
+<td valign="top">
+<ul>
+<li>SUB</li>
+<li>the sub will give you written instructions which ask you to do the following</li>
+<li>draw a plate of food</li>
+<li>find a sketch you like on openprocessing.org/browse</li>
+<li>email Smith the code for your food sketch and the link to the sketch you like on openprocessing<li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Jan 27
+</td>
+<td valign="top">
+4
+</td>
+<td valign="top">
+<ul>
+<li>Announcements: deadlines + quiz moved to Monday, remember vocab link below, new featured project added below</li>
+<li>Lecture: opacity, text, CamelCase</li>
+<li>Do: Practice Quiz</li>
+<li>Project: submit OlympicRings and MyPenguin before you leave class</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Jan 30
+</td>
+<td valign="top">
+5
+</td>
+<td valign="top">
+<ul>
+<li>SHORT BLOCK</li>
+<li>Do: quiz</li>
+<li>Lecture: demo unit project, arithmetic</li>
+<li>Do: tinker with symmetry</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Feb 1
+</td>
+<td valign="top">
+6
+</td>
+<td valign="top">
+<ul>
+<li>Lecture: variables</li>
+<li>Do: make a stoplight</li>
+<li>coding challenge: the Hermann Grid Illusion</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Feb 3
+</td>
+<td valign="top">
+7
+</td>
+<td valign="top">
+<ul>
+<li>Lecture: loops, animation</li>
+<li>Do: tinker with animation</li>
+<li>Do: start WoodstockWave</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Mon<br>Feb 6
+</td>
+<td valign="top">
+8
+</td>
+<td valign="top">
+<ul>
+<li>Announcement: juniors look into CRREL internship</li>
+<li>Lecture: adding intelligence = if blocks</li>
+<li>Do: tinker with animation and if blocks</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Wed<br>Feb 8
+</td>
+<td valign="top">
+9
+</td>
+<td valign="top">
+<ul>
+<li>Announcement: introduce HalftimePenguin</li>
+<li>Do: work on project</li>
+<li>Coding Challenge</li>
+<li>Pair Feedback</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Fri<br>Feb 10
+</td>
+<td valign="top">
+10
+</td>
+<td valign="top">
+<ul>
+<li>Starter: make a simple bouncing ball</li>
+<li>Do: work on HalftimePenguin</li>
+<li>Finished? Read ahead on slides, and try starting WoodstockWave</li>
+<li>Coding Challenge</li>
+<li>Pair Feedback</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Mon<br>Feb 13
+</td>
+<td valign="top">
+11
+</td>
+<td valign="top">
+<ul>
+<li>SNOW DAY</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Wed<br>Feb 15
+</td>
+<td valign="top">
+12
+</td>
+<td valign="top">
+<ul>
+<li>Work on WoodstockWave together</li>
+<li>introduce while loop</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Fri<br>Feb 17
+</td>
+<td valign="top">
+13
+</td>
+<td valign="top">
+<ul>
+<li>Do: work on HalftimePenguin</li>
+<li>3D Coding Challenge: 100 Random Shapes</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Mon<br>Feb 27
+</td>
+<td valign="top">
+14
+</td>
+<td valign="top">
+<ul>
+<li>introduce stuck points page and bonus binder</li>
+<li>finish and submit halftime penguins... finished? see Bonus Binder</li>
+<li>slides: while + random</li>
+<li>create <a href="https://docs.google.com/document/d/1qhHXFqc88GKsJBMScpO7SaLnnlvTP8nehZNGMwg2iaU/edit?usp=sharing">"while loop" reference sketches</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Wed<br>Mar 1
+</td>
+<td valign="top">
+15
+</td>
+<td valign="top">
+SUB, study hall
+</td>
+</tr>
+<tr>
+<td valign="top">
+Fri<br>Mar 3
+</td>
+<td valign="top">
+16
+</td>
+<td valign="top">
+<ul>
+<li>submit halftime penguins</li>
+<li>submit woodstock wave</li>
+<li>work on <a href="https://docs.google.com/document/d/1qhHXFqc88GKsJBMScpO7SaLnnlvTP8nehZNGMwg2iaU/edit?usp=sharing">"while loop" reference sketches</a></li>
+<li>finished? see Bonus Projects (binder on Smith's desk and code at link below)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Thu<br>Mar 9
+</td>
+<td valign="top">
+17
+</td>
+<td valign="top">
+<ul>
+<li>Warmup: fill in the blank for while loops</li>
+<li>Lecture: how to see what you've submitted on github</li>
+<li>work on <a href="https://docs.google.com/document/d/1qhHXFqc88GKsJBMScpO7SaLnnlvTP8nehZNGMwg2iaU/edit?usp=sharing">"while loop" reference sketches</a></li>
+<li>watch Shiffman videos 6.3, 6.4, and 6.5 from <a href="https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bm-3M4Wntd4yYZGKwiKfrQ">this playlist</a> - take notes, which you can use on the quizzes</li>
+<li>add something to your HalftimePenguin which uses a for loop or a while loop. save it as LoopyPenguin</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Mon<br>Mar 13
+</td>
+<td valign="top">
+18
+</td>
+<td valign="top">
+<ul>
+<li>favicon, instructions given by sub</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Wed<br>Mar 15
+</td>
+<td valign="top">
+19
+</td>
+<td valign="top">
+<ul>
+<li>pair programming: plinko</li>
+<li>finish favicon</li>
+<li>work on While reference sketches, loopy penguin, Shiffman lectures 6.3-6.5</li>
+<li>Finished? check the bonus project link below</li>
+<li>exit ticket</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Fri<br>Mar 17
+</td>
+<td valign="top">
+20
+</td>
+<td valign="top">
+<ul>
+<li>finish assignments</li>
+<li>Finished? try to figure out how <a href="https://www.openprocessing.org/sketch/181100">this code</a> works, and make your own clock or timer</li>
+<li>exit ticket</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Tue<br>Mar 21
+</td>
+<td valign="top">
+21
+</td>
+<td valign="top">
+<ul>
+<li>pairwork exploring function code</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Thu<br>Mar 23
+</td>
+<td valign="top">
+22
+</td>
+<td valign="top">
+<ul>
+<li>Get a sheet of white paper from the back of the room (or your binder!), turn it sideways, and divide it into three sections. Watch the first three videos about functions (7.1, 7.2, and 7.3) at <a href="https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ajGB2OI3hl5DZsD1Fw1WzR">this playlist</a>.</li>
+<li>While you're watching, for each video write in one of the sections on your paper: a list of at least THREE things that you understand or that you wonder about (related to programming!). The purpose of this task is for you to show me what you're thinking about (related to programming!) while you're watching these videos.</li>
+<li>Put your name on the paper and give it to the sub.</li>
+<li>Finished? This is the last day in class to work on your favicon (voting on Monday!), or work on plinko, or work on the clock or timer mentioned above in the Mar 17 notes.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top">
+Mon<br>Mar 27
+</td>
+<td valign="top">
+23
+</td>
+<td valign="top">
+<ul>
+<li>vote on favicons</li>
+<li>finish field of flowers</li>
+<li>work on unfinished assignments</li>
+<li>work on plinko (use plinko milestones sheet)</li>
+</ul>
+</td>
+</tr>
+-->
+<tr>
+  <td valign="top">
+    Mon<br>Apr 10
+  </td>
+  <td valign="top">
+    28
+  </td>
+  <td valign="top">
+    <ul>
+      <li>make lightning outside</li>
+      <li>make first lightning sketch</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td valign="top">
+    Wed<br>Apr 12
+  </td>
+  <td valign="top">
+    29
+  </td>
+  <td valign="top">
+    <ul>
+      <li>work on FunctionExercises and Lightning</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td valign="top">
+    Fri<br>Apr 14
+  </td>
+  <td valign="top">
+    30
+  </td>
+  <td valign="top">
+    <ul>
+      <li>project work and outside</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td valign="top">
+    Tue<br>Apr 25
+  </td>
+  <td valign="top">
+    31
+  </td>
+  <td valign="top">
+    <ul>
+      <li>finish Lightning</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td valign="top">
+    Thu<br>Apr 27
+  </td>
+  <td valign="top">
+    32
+  </td>
+  <td valign="top">
+    <ul>
+      <li>looping quiz</li>
+      <li>Khan Hour of Webpages (see assignments above for link)</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td valign="top">
+    Mon<br>May 1
+  </td>
+  <td valign="top">
+    33
+  </td>
+  <td valign="top">
+    <ul>
+      <li>work on FirstHtml assignment (includes Khan, see link above)</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td valign="top">
+    Wed<br>May 3
+  </td>
+  <td valign="top">
+    34
+  </td>
+  <td valign="top">
+    <ul>
+      <li>codingbat: sumDouble</li>
+      <li>be sure your FirstHtml is done by end of the day</li>
+      <li>work on IntroToJs assignments</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td valign="top">
+    Fri<br>May 5
+  </td>
+  <td valign="top">
+    35
+  </td>
+  <td valign="top">
+    <ul>
+      <li>codingbat: makes10</li>
+      <li>work on IntroToJs assignments (do this first "Logic and If Statements")</li>
+      <li>practice worksheet</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td valign="top">
+    Tue<br>May 9
+  </td>
+  <td valign="top">
+    36
+  </td>
+  <td valign="top">
+    <ul>
+      <li>codingbat</li>
+      <li>SnakeGame</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td valign="top">
+    Thu<br>May 11
+  </td>
+  <td valign="top">
+    37
+  </td>
+  <td valign="top">
+    <ul>
+      <li>finish IntroToJS > "Logic and If Statements"</li>
+      <li>finish SnakeGame</li>
+      <li>sync meeting with Smith</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td valign="top">
+    Mon<br>May 15
+  </td>
+  <td valign="top">
+    38
+  </td>
+  <td valign="top">
+    <ul>
+      <li>Profile Project (start on paper)</li>
+      <li>final project sync with Smith</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td valign="top">
+    Wed<br>May 17
+  </td>
+  <td valign="top">
+    39
+  </td>
+  <td valign="top">
+    <ul>
+      <li>codingbat: Logic-1 > in1To10</li>
+      <li>Profile Project (start on paper)</li>
+      <li>final project sync with Smith</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td valign="top">
+    Fri<br>May 19
+  </td>
+  <td valign="top">
+    40
+  </td>
+  <td valign="top">
+    <ul>
+      <li>set up ProfilePictures on your local</li>
+      <li>do at least Profile Pictures Part 2 (6.6 Nested Loops video (link above)) and Profile Pictures Part 4 (ProfilePictures repo on github)</li>
+      <li>final project sync with Smith</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td valign="top">
+    Tue<br>May 23
+  </td>
+  <td valign="top">
+    41
+  </td>
+  <td valign="top">
+    <ul>
+      <li>work on ProfilePictures
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td valign="top">
+    Thu<br>May 25
+  </td>
+  <td valign="top">
+    42
+  </td>
+  <td valign="top">
+    <ul>
+      <li>start final project</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td valign="top">
+    Tue<br>May 30
+  </td>
+  <td valign="top">
+    43
+  </td>
+  <td valign="top">
+    <ul>
+      <li>work on final project</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td valign="top">
+    Thu<br>June 1
+  </td>
+  <td valign="top">
+    44
+  </td>
+  <td valign="top">
+    <ul>
+      <li>work on final project</li>
+    </ul>
+  </td>
+</tr>
+</table>
 <br>
-
-    <h1>Computer Programming</h1>
-    <p>2nd Semester, H Block, Room 9</p>
-    <p>Instructor: Andrew Smith <a href="mailto:AndrewSmith@wcsu.net">AndrewSmith@wcsu.net</a></p>
-    <br>
-    <h3>Assignments & Quizzes</h3>
-    <p><i>All assignments are due at the start of class on the date indicated.</i></p>
-
-    <table>
-      <tr>
-        <th>
-          Due/Date
-        </th>
-        <th>
-          Instructions
-        </th>
-      </tr>
-      <tr>
-        <td valign="top">
-          Apr 14, end of class
-        </td>
-        <td valign="top">
-          FunctionExercises: six PDE files updated in your fork of the repo on github<br>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Apr 14, end of class
-        </td>
-        <td valign="top">
-          Lightning: one PDE file updated in your fork of the repo on github<br>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Apr 27
-        </td>
-        <td valign="top">
-          Looping Quiz<br>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          May 3, end of class
-        </td>
-        <td valign="top">
-          do FirstHtml (includes Khan Academy)
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          May 15, start of class
-        </td>
-        <td valign="top">
-	  finish <a href="https://www.khanacademy.org/computing/computer-programming/programming#logic-if-statements">Khan > Intro to JS > Logic & If Statements</a><br>
-	  NO GITHUB - JUST MAKE SURE YOU'RE SIGNED IN
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          May 15, start of class
-        </td>
-        <td valign="top">
-	  do SnakeGame, fork a repo in Github. make sure it displays on your webpage. (you can skip pull request)
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          May 23, start of class
-        </td>
-        <td valign="top">
-	  do ProfileProject: follow the paper packet, and the last part is on github<br>(includes Shiffman video <a href="https://www.youtube.com/watch?v=H7frvcAHXps">6.6 Nested Loops</a>)
-        </td>
-      </tr>      
-      <tr>
-        <td valign="top">
-          June 8 (or May 31 for seniors)
-        </td>
-        <td valign="top">
-	  These codingbat problems:<br>
-	  Warmup-1 > sleepIn<br>
-	  Warmup-1 > sumDouble<br>
-	  Warmup-1 > makes10<br>
-	  Warmup-1 > diff21<br>
-	  Logic-1 > sortaSum<br>
-	  Logic-1 > in1To10<br>
-	  Logic-1 > twoAsOne<br>
-	  <br>
-	  optional DISTINGUISHED, add these: <br>
-	  Logic-1 > dateFashionteaParty<br>
-	  Logic-1 > alarmClock<br>
-	  Logic-2 > loneSum<br>
-	  Logic-2 > luckySum<br>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Seniors = June 2, 3pm<br>
-	  rest = June 9, 3pm
-        </td>
-        <td valign="top">
-	  FinalExamProject<br>
-        </td>
-      </tr>
-      <!-- hide quarter 3
-      <tr>
-        <td valign="top">
-          Jan 19
-        </td>
-        <td valign="top">
-          1. read the syllabus (linked below) with your parent/guardian<br>
-          2. each of you please me separate emails saying you read it
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Jan 30
-        </td>
-        <td valign="top">
-          create a pull request on github for your OlympicRings
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Jan 30
-        </td>
-        <td valign="top">
-          create a pull request on github for your MyPenguin
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Jan 30
-        </td>
-        <td valign="top">
-          Quiz 0, on drawing functions and basic terms
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Mar 9
-        </td>
-        <td valign="top">
-          submit a pull request for HalftimePenguin
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Mar 9
-        </td>
-        <td valign="top">
-          submit a pull request for WoodstockWave
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Mar 21
-        </td>
-        <td valign="top">
-         submit a pull request for MyFavicon (see paper given in class 3/13)
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Mar 21
-        </td>
-        <td valign="top">
-          save <a href="https://docs.google.com/document/d/1qhHXFqc88GKsJBMScpO7SaLnnlvTP8nehZNGMwg2iaU/edit?usp=sharing">set of "while loop" reference sketches</a> in your sketchbook
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Mar 21
-        </td>
-        <td valign="top">
-          LoopyPenguin saved to your sketchbook (see class notes below)
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Mar 23
-        </td>
-        <td valign="top">
-          video notes from March 23 sub class (see class notes below)
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Mar 29
-        </td>
-        <td valign="top">
-          Quiz 1: while loops and variables
-        </td>
-      </tr>
-      -->
-
-	
-    </table>
-    <br>
-    <h3>Schedule</h3>
-    <table>
-      <tr>
-        <th>
-          Date
-        </th>
-        <th>
-          Day
-        </th>
-        <th>
-          Agenda
-        </th>
-      </tr>
-      <!-- hide quarter 3
-      <tr>
-        <td valign="top">
-          Jan 17
-        </td>
-        <td valign="top">
-          0
-        </td>
-        <td valign="top">
-          <ul>
-            <li>Lecture: intro to course, intro to processing, how to submit projects</li>
-            <li>Project: work on OlympicRings</li>
-            <li>Finished? tinker with a new design or browse OpenProcessing.org</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Jan 19
-        </td>
-        <td valign="top">
-          1
-        </td>
-        <td valign="top">
-          <ul>
-            <li>Announcements: remember woodstockcs.github.io ... also: syllabus signature (grade)</li>
-            <li>Lecture: how to submit projects, more drawing functions</li>
-            <li>Project: work on OlympicRings and MyPenguin</li>
-            <li>Finished? browse OpenProcessing.org OR use the Processing API to teach yourself a new function</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Jan 23
-        </td>
-        <td valign="top">
-          2
-        </td>
-        <td valign="top">
-          <ul>
-            <li>SHORT BLOCK</li>
-            <li>Announcements: remember woodstockcs.github.io</li>
-            <li>Lecture: Kanizsa Triangle coding challenge</li>
-            <li>Project: work on OlympicRings and MyPenguin</li>
-            <li>Finished? browse OpenProcessing.org OR make your own Kanizsa Triangle</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Jan 25
-        </td>
-        <td valign="top">
-          3
-        </td>
-        <td valign="top">
-          <ul>
-            <li>SUB</li>
-            <li>the sub will give you written instructions which ask you to do the following</li>
-            <li>draw a plate of food</li>
-            <li>find a sketch you like on openprocessing.org/browse</li>
-            <li>email Smith the code for your food sketch and the link to the sketch you like on openprocessing<li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Jan 27
-        </td>
-        <td valign="top">
-          4
-        </td>
-        <td valign="top">
-          <ul>
-            <li>Announcements: deadlines + quiz moved to Monday, remember vocab link below, new featured project added below</li>
-            <li>Lecture: opacity, text, CamelCase</li>
-            <li>Do: Practice Quiz</li>
-            <li>Project: submit OlympicRings and MyPenguin before you leave class</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Jan 30
-        </td>
-        <td valign="top">
-          5
-        </td>
-        <td valign="top">
-          <ul>
-            <li>SHORT BLOCK</li>
-            <li>Do: quiz</li>
-            <li>Lecture: demo unit project, arithmetic</li>
-            <li>Do: tinker with symmetry</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Feb 1
-        </td>
-        <td valign="top">
-          6
-        </td>
-        <td valign="top">
-          <ul>
-            <li>Lecture: variables</li>
-            <li>Do: make a stoplight</li>
-            <li>coding challenge: the Hermann Grid Illusion</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Feb 3
-        </td>
-        <td valign="top">
-          7
-        </td>
-        <td valign="top">
-          <ul>
-            <li>Lecture: loops, animation</li>
-            <li>Do: tinker with animation</li>
-            <li>Do: start WoodstockWave</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Mon<br>Feb 6
-        </td>
-        <td valign="top">
-          8
-        </td>
-        <td valign="top">
-          <ul>
-            <li>Announcement: juniors look into CRREL internship</li>
-            <li>Lecture: adding intelligence = if blocks</li>
-            <li>Do: tinker with animation and if blocks</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Wed<br>Feb 8
-        </td>
-        <td valign="top">
-          9
-        </td>
-        <td valign="top">
-          <ul>
-            <li>Announcement: introduce HalftimePenguin</li>
-            <li>Do: work on project</li>
-            <li>Coding Challenge</li>
-            <li>Pair Feedback</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Fri<br>Feb 10
-        </td>
-        <td valign="top">
-          10
-        </td>
-        <td valign="top">
-          <ul>
-            <li>Starter: make a simple bouncing ball</li>
-            <li>Do: work on HalftimePenguin</li>
-            <li>Finished? Read ahead on slides, and try starting WoodstockWave</li>
-            <li>Coding Challenge</li>
-            <li>Pair Feedback</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Mon<br>Feb 13
-        </td>
-        <td valign="top">
-          11
-        </td>
-        <td valign="top">
-          <ul>
-            <li>SNOW DAY</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Wed<br>Feb 15
-        </td>
-        <td valign="top">
-          12
-        </td>
-        <td valign="top">
-          <ul>
-            <li>Work on WoodstockWave together</li>
-            <li>introduce while loop</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Fri<br>Feb 17
-        </td>
-        <td valign="top">
-          13
-        </td>
-        <td valign="top">
-          <ul>
-            <li>Do: work on HalftimePenguin</li>
-            <li>3D Coding Challenge: 100 Random Shapes</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Mon<br>Feb 27
-        </td>
-        <td valign="top">
-          14
-        </td>
-        <td valign="top">
-          <ul>
-            <li>introduce stuck points page and bonus binder</li>
-            <li>finish and submit halftime penguins... finished? see Bonus Binder</li>
-            <li>slides: while + random</li>
-            <li>create <a href="https://docs.google.com/document/d/1qhHXFqc88GKsJBMScpO7SaLnnlvTP8nehZNGMwg2iaU/edit?usp=sharing">"while loop" reference sketches</a></li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Wed<br>Mar 1
-        </td>
-        <td valign="top">
-          15
-        </td>
-        <td valign="top">
-          SUB, study hall
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Fri<br>Mar 3
-        </td>
-        <td valign="top">
-          16
-        </td>
-        <td valign="top">
-          <ul>
-            <li>submit halftime penguins</li>
-            <li>submit woodstock wave</li>
-            <li>work on <a href="https://docs.google.com/document/d/1qhHXFqc88GKsJBMScpO7SaLnnlvTP8nehZNGMwg2iaU/edit?usp=sharing">"while loop" reference sketches</a></li>
-            <li>finished? see Bonus Projects (binder on Smith's desk and code at link below)</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Thu<br>Mar 9
-        </td>
-        <td valign="top">
-          17
-        </td>
-        <td valign="top">
-          <ul>
-            <li>Warmup: fill in the blank for while loops</li>
-            <li>Lecture: how to see what you've submitted on github</li>
-            <li>work on <a href="https://docs.google.com/document/d/1qhHXFqc88GKsJBMScpO7SaLnnlvTP8nehZNGMwg2iaU/edit?usp=sharing">"while loop" reference sketches</a></li>
-            <li>watch Shiffman videos 6.3, 6.4, and 6.5 from <a href="https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bm-3M4Wntd4yYZGKwiKfrQ">this playlist</a> - take notes, which you can use on the quizzes</li>
-            <li>add something to your HalftimePenguin which uses a for loop or a while loop. save it as LoopyPenguin</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Mon<br>Mar 13
-        </td>
-        <td valign="top">
-          18
-        </td>
-        <td valign="top">
-          <ul>
-            <li>favicon, instructions given by sub</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Wed<br>Mar 15
-        </td>
-        <td valign="top">
-          19
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>pair programming: plinko</li>
-	    <li>finish favicon</li>
-	    <li>work on While reference sketches, loopy penguin, Shiffman lectures 6.3-6.5</li>
-	    <li>Finished? check the bonus project link below</li>
-            <li>exit ticket</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Fri<br>Mar 17
-        </td>
-        <td valign="top">
-          20
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>finish assignments</li>
-	    <li>Finished? try to figure out how <a href="https://www.openprocessing.org/sketch/181100">this code</a> works, and make your own clock or timer</li>
-            <li>exit ticket</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Tue<br>Mar 21
-        </td>
-        <td valign="top">
-          21
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>pairwork exploring function code</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Thu<br>Mar 23
-        </td>
-        <td valign="top">
-          22
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>Get a sheet of white paper from the back of the room (or your binder!), turn it sideways, and divide it into three sections. Watch the first three videos about functions (7.1, 7.2, and 7.3) at <a href="https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ajGB2OI3hl5DZsD1Fw1WzR">this playlist</a>.</li>
-	    <li>While you're watching, for each video write in one of the sections on your paper: a list of at least THREE things that you understand or that you wonder about (related to programming!). The purpose of this task is for you to show me what you're thinking about (related to programming!) while you're watching these videos.</li>
-	    <li>Put your name on the paper and give it to the sub.</li>
-	    <li>Finished? This is the last day in class to work on your favicon (voting on Monday!), or work on plinko, or work on the clock or timer mentioned above in the Mar 17 notes.</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Mon<br>Mar 27
-        </td>
-        <td valign="top">
-          23
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>vote on favicons</li>
-	    <li>finish field of flowers</li>
-	    <li>work on unfinished assignments</li>
-	    <li>work on plinko (use plinko milestones sheet)</li>
-          </ul>
-        </td>
-      </tr>
-      -->
-      <tr>
-        <td valign="top">
-          Mon<br>Apr 10
-        </td>
-        <td valign="top">
-          28
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>make lightning outside</li>
-	    <li>make first lightning sketch</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Wed<br>Apr 12
-        </td>
-        <td valign="top">
-          29
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>work on FunctionExercises and Lightning</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Fri<br>Apr 14
-        </td>
-        <td valign="top">
-          30
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>project work and outside</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Tue<br>Apr 25
-        </td>
-        <td valign="top">
-          31
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>finish Lightning</li>
-          </ul>
-        </td>
-      </tr>
-          <tr>
-        <td valign="top">
-          Thu<br>Apr 27
-        </td>
-        <td valign="top">
-          32
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>looping quiz</li>
-	    <li>Khan Hour of Webpages (see assignments above for link)</li>
-          </ul>
-        </td>
-	  </tr>
-          <tr>
-        <td valign="top">
-          Mon<br>May 1
-        </td>
-        <td valign="top">
-          33
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>work on FirstHtml assignment (includes Khan, see link above)</li>
-          </ul>
-        </td>
-	  </tr>
-          <tr>
-        <td valign="top">
-          Wed<br>May 3
-        </td>
-        <td valign="top">
-          34
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>codingbat: sumDouble</li>
-	    <li>be sure your FirstHtml is done by end of the day</li>
-	    <li>work on IntroToJs assignments</li>
-          </ul>
-        </td>
-	  </tr>
-          <tr>
-        <td valign="top">
-          Fri<br>May 5
-        </td>
-        <td valign="top">
-          35
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>codingbat: makes10</li>
-	    <li>work on IntroToJs assignments (do this first "Logic and If Statements")</li>
-	    <li>practice worksheet</li>
-          </ul>
-        </td>
-	  </tr>
-      <tr>
-        <td valign="top">
-          Tue<br>May 9
-        </td>
-        <td valign="top">
-          36
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>codingbat</li>
-	    <li>SnakeGame</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Thu<br>May 11
-        </td>
-        <td valign="top">
-          37
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>finish IntroToJS > "Logic and If Statements"</li>
-	    <li>finish SnakeGame</li>
-	    <li>sync meeting with Smith</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Mon<br>May 15
-        </td>
-        <td valign="top">
-          38
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>Profile Project (start on paper)</li>
-	    <li>final project sync with Smith</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Wed<br>May 17
-        </td>
-        <td valign="top">
-          39
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>codingbat: Logic-1 > in1To10</li>
-	    <li>Profile Project (start on paper)</li>
-	    <li>final project sync with Smith</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td valign="top">
-          Fri<br>May 19
-        </td>
-        <td valign="top">
-          40
-        </td>
-        <td valign="top">
-          <ul>
-	    <li>set up ProfilePictures on your local</li>
-	    <li>do at least Profile Pictures Part 2 (6.6 Nested Loops video (link above)) and Profile Pictures Part 4 (ProfilePictures repo on github)</li>
-	    <li>final project sync with Smith</li>
-          </ul>
-        </td>
-      </tr>
-    </table>
-    <br>
-    <h3>Class Links</h3>
-    <ul>
-      <li><a href="https://www.youtube.com/watch?v=h4ApLHe8tbk">For Loops reference video</a></li>
-      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfVmXrC0rqxwv82XQhg1uC4-NA_rrav5euYSwOY-asdfuSrgw/viewform">Exit Ticket</a> ... or type http://bit.do/cp-0</li>
-      <li><a href="https://github.com/WoodstockCS">WoodstockCS repos on github</a></li>
-      <li><a href="https://docs.google.com/document/d/1BHc_rFCWGPv5WpAWYtbQLikOR0Yqqmm0LpT5c1bLA8g/edit?usp=sharing">Troubleshooting Tips</a> <-- ADD TO THIS</li>
-      <li><a href="https://docs.google.com/document/d/10XzhZ60t96EoIX_YvoSIH2eU83rkuVbDvdBt-Y4p-LI/edit">How to work with github</a></li>
-      <li><a href="https://drive.google.com/open?id=0B6wBwD0pwox6Mk80WkVqcURUcFk">Lecture Slides</a></li>
-      <li><a href="https://docs.google.com/document/d/1k2XASyymIVCyJSu23i0CIgXOzBDaICqtAViYw1Qfqpg/pub">Bonus Projects</a></li>
-      <li><a href="https://docs.google.com/document/d/1DQ78j12EC5GgXdKJ5ES4YLJuC2ZDB_0Ht56LEVbHqL0/edit?usp=sharing">Syllabus</a></li>
-    </ul>
-    <br>
-    <h3>Processing Links</h3>
-    <ul>
-      <li><a href="http://processing.org/reference/">Processing API</a></li>
-      <li><a href="http://paletton.com/">Paletton Color Scheme Designer</a></li>
-      <li><a href="https://www.openprocessing.org/browse/?q=&time=anytime&type=#">inspiration: recent hearts on OpenProcessing.org</a></li>
-    </ul>
-    <br>
-    <h3>Featured Projects</h3>
-    <div id="content">
-      <p>JD: press l, m, or n to see different patterns:</p>
-
-      <canvas data-processing-sources="jdScreenSaver.pde"></canvas>
-    </div>
-  </body>
+<h3>Class Links</h3>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=h4ApLHe8tbk">For Loops reference video</a></li>
+  <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfVmXrC0rqxwv82XQhg1uC4-NA_rrav5euYSwOY-asdfuSrgw/viewform">Exit Ticket</a> ... or type http://bit.do/cp-0</li>
+  <li><a href="https://github.com/WoodstockCS">WoodstockCS repos on github</a></li>
+  <li><a href="https://docs.google.com/document/d/1BHc_rFCWGPv5WpAWYtbQLikOR0Yqqmm0LpT5c1bLA8g/edit?usp=sharing">Troubleshooting Tips</a> <-- ADD TO THIS</li>
+  <li><a href="https://docs.google.com/document/d/10XzhZ60t96EoIX_YvoSIH2eU83rkuVbDvdBt-Y4p-LI/edit">How to work with github</a></li>
+  <li><a href="https://drive.google.com/open?id=0B6wBwD0pwox6Mk80WkVqcURUcFk">Lecture Slides</a></li>
+  <li><a href="https://docs.google.com/document/d/1k2XASyymIVCyJSu23i0CIgXOzBDaICqtAViYw1Qfqpg/pub">Bonus Projects</a></li>
+  <li><a href="https://docs.google.com/document/d/1DQ78j12EC5GgXdKJ5ES4YLJuC2ZDB_0Ht56LEVbHqL0/edit?usp=sharing">Syllabus</a></li>
+</ul>
+<br>
+<h3>Processing Links</h3>
+<ul>
+  <li><a href="http://processing.org/reference/">Processing API</a></li>
+  <li><a href="http://paletton.com/">Paletton Color Scheme Designer</a></li>
+  <li><a href="https://www.openprocessing.org/browse/?q=&time=anytime&type=#">inspiration: recent hearts on OpenProcessing.org</a></li>
+</ul>
+<br>
+</body>
 </html>
